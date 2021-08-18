@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues 2</title>
+	</head>
+	<body>
+		<h1>todos los equipos en la Atlantic Soccer Conference</h1>
+		<ol>
+			{% for a in equipos_atrantic %}
+				<li>{{a.team_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+        <h1>todos los jugadores (actuales) en los Boston Penguins</h1>
+		<ol>
+			{% for b in curr_boston %}
+				<li>{{b.first_name}} {{b.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1> todos los jugadores (actuales) en la International Collegiate Baseball Conference</h1>
+		<ol>
+			{% for c in curr_baseball %}
+				<li>{{c.first_name}} {{c.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos los jugadores (actuales) en la Conferencia Americana de Fútbol Amateur con el apellido "López"</h1>
+		<ol>
+			{% for d in lopez_player %}
+				<li>{{d.first_name}} {{d.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1> todos los jugadores de fútbol</h1>
+		<ol>
+			{% for e in football_player %}
+				<li>{{e.first_name}} {{e.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1> todos los equipos con un jugador (actual) llamado "Sophia"</h1>
+		<ol>
+			{% for f in team_sophia %}
+				<li>{{f.team_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1> todas las ligas con un jugador (actual) llamado "Sophia"</h1>
+		<ol>
+			{% for g in ligas_sophia %}
+				<li>{{g.name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos con el apellido "Flores" que NO (actualmente) juegan para los Washington Roughriders</h1>
+		<ol>
+			{% for h in player_flores %}
+				<li>{{h.first_name}} {{h.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos los equipos, pasados y presentes, con los que Samuel Evans ha jugado</h1>
+		<ol>
+			{% for i in team_evans %}
+				<li>{{i.team_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos los jugadores, pasados y presentes, con los gatos tigre de Manitoba</h1>
+		<ol>
+			{% for j in team_cats %}
+				<li>{{j.first_name}} {{j.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos los jugadores que anteriormente estaban (pero que no lo están) con los Wichita Vikings</h1>
+		<ol>
+			{% for k in wichita_player %}
+				<li>{{k.first_name}} {{k.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>cada equipo para el que Jacob Gray jugó antes de unirse a los Oregon Colts</h1>
+		<ol>
+			{% for l in jacob_team %}
+				<li>{{l.team_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos llamados "Joshua" que alguna vez han jugado en la Federación Atlántica de Jugadores de Béisbol Amateur</h1>
+		<ol>
+			{% for m in joshua_player %}
+				<li>{{m.first_name}} {{m.last_name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos los equipos que han tenido 12 o más jugadores, pasados y presentes. (SUGERENCIA: busque la función de anotación de Django).</h1>
+		<ol>
+			{% for n in 12_player %}
+				<li>{{n.location}} {{n.team_name}} ({{n.numero_jugadores}})</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>todos los jugadores y el número de equipos para los que jugó, ordenados por la cantidad de equipos para los que han jugado</h1>
+		<ol>
+			{% for o in every_team %}
+				<li>{{o.first_name}} {{o.last_name}} ({{o.all_teams.all.count}})</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+	</body>
+</html>
